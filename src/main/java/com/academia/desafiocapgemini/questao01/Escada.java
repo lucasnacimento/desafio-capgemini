@@ -12,20 +12,7 @@ public class Escada {
 
     private int quantidadeDeDegraus;
 
-    public String montarEscada() {
-        String degraus = "";
-        for (int i = 0; i <= quantidadeDeDegraus; i++) {
-            for (int j = 0; j < i; j++) {
-                degraus += "*";
-
-            }
-            degraus +="\n";
-        }
-
-        return degraus;
-    }
-
-    public String[] montar() {
+    public String[] montarEscada() {
         String espaco = " ";
         String degrau = "*";
         String[]escada = new String[quantidadeDeDegraus];

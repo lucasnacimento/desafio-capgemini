@@ -22,7 +22,7 @@ public class DesafioCapgeminiApplication implements CommandLineRunner {
 	public static void executarQuestao01(int qtdDegraus){
 		Escada escada = new Escada(qtdDegraus);
 
-		String[] resultado = escada.montar();
+		String[] resultado = escada.montarEscada();
 		Arrays.stream(resultado).forEach(System.out::println);
 	}
 }

@@ -1,6 +1,7 @@
 package com.academia.desafiocapgemini;
 
 import com.academia.desafiocapgemini.questao01.Escada;
+import com.academia.desafiocapgemini.questao02.VerificadorDeSenha;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +18,7 @@ public class DesafioCapgeminiApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		executarQuestao01(10);
+		executarQuestao02("KAR4a%pio");
 	}
 
 	public static void executarQuestao01(int qtdDegraus){
@@ -25,4 +27,13 @@ public class DesafioCapgeminiApplication implements CommandLineRunner {
 		String[] resultado = escada.montarEscada();
 		Arrays.stream(resultado).forEach(System.out::println);
 	}
+
+
+	public static void executarQuestao02(String senha){
+		VerificadorDeSenha verificador = new VerificadorDeSenha(senha);
+
+		System.out.println(verificador.resultado());
+	}
+
+
 }
